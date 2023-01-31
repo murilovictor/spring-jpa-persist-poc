@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@EntityScan("br.com.hdi.my_app.domain")
+@EntityScan("br.com.hdi.springjpapersistpoc.domain")
 @EnableJpaRepositories("br.com.hdi.springjpapersistpoc.repository")
 @EnableTransactionManagement
 public class DomainConfig {
