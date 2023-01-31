@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/dbname}
+    username: ${JDBC_DATABASE_USERNAME:dbuser}
+    password: ${JDBC_DATABASE_PASSWORD:dbpassword}
+    dbcp2:
+      max-wait-millis: 30000
+      validation-query: SELECT 1
+      validation-query-timeout: 30
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: br.com.hdi.springjpapersistpoc.config.LowerCasePhysicalNamingStrategyStandardImpl
+    open-in-view: false
+    show-sql: true
